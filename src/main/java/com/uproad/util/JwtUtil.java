@@ -31,7 +31,7 @@ public class JwtUtil {
 		}catch(SignatureException e){
 			return "token verify fail";
 		}catch(JwtException e){
-			logger.error("token format err");
+			logger.error(e.toString());
 			return "token is illegal";
 		}
 		return "token pass";
